@@ -21,15 +21,14 @@
     "ts-jest": "latest",
     "ts-loader": "latest",
     "tslint": "latest",
-    "tslint-microsoft-contrib": "latest",
     "typescript": "latest",
     "webpack": "4.8.3",
     "webpack-cli": "2.1.3"
   },
   "scripts": {
     "build": "webpack --display-error-details && npm run lint",
-    "lint": "tslint --project tsconfig.json -t verbose src/**/*.ts[x]",
+    "lint": "tslint -t verbose --project tsconfig.json --config tslint-src.json --exclude '**/*.test.tsx'",
     "start": "python -m SimpleHTTPServer 8000",
-    "test": "jest"
+    "test": "tslint -t verbose --project tsconfig.json --config tslint-test.json '**/*.test.tsx' && jest"
   }
 }

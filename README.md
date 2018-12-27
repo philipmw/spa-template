@@ -58,6 +58,17 @@ A non-traditional host that I really like, for its simplicity and speed, is
 
 Here is the Internet-hosted version of this project: http://philipmw-spa-template.s3-website-us-west-2.amazonaws.com/
 
+## Rationale for certain decisions
+
+Q: Why is source and tests in the same directory, as opposed to `src/` vs `test/`?
+
+A: The pro is that it feels more natural to have tests next to source.
+   It is also how the book I'm reading, [_Test-Driven React_](https://pragprog.com/book/tbreact/test-driven-react),
+   does it.
+   The con is that Tslint's configuration is a touch more complex, since I want to
+   apply different line rules to source vs. test code, but the files are in the same
+   directory.
+
 ## Can you make it better?
 
 I welcome your ideas and contributions.
