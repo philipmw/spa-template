@@ -16,7 +16,7 @@ Good practices this repo provides:
 ## Prerequisites
 
 Install [`npm`](https://www.npmjs.com/) using whatever
-means is most convenient for you, such as Homebrew on macOS.
+means is most convenient for you, such as [Homebrew](https://brew.sh/) on macOS.
 
 ## Initialization
 
