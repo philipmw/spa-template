@@ -4,26 +4,32 @@
   "homepage": "https://github.com/philipmw/spa-template",
   "license": "MIT",
   "dependencies": {
-    "react": "16.3.2",
-    "react-dom": "16.3.2"
+    "react": "16.7.0",
+    "react-dom": "16.7.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/philipmw/spa-template"
   },
   "devDependencies": {
+    "@types/jest": "latest",
     "@types/react": "~16",
     "@types/react-dom": "latest",
-    "typescript": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
     "ts-loader": "latest",
     "tslint": "latest",
     "tslint-microsoft-contrib": "latest",
+    "typescript": "latest",
     "webpack": "4.8.3",
     "webpack-cli": "2.1.3"
   },
   "scripts": {
-    "lint": "tslint --project tsconfig.json -t verbose src/**/*.ts[x]",
     "build": "webpack --display-error-details && npm run lint",
-    "start": "python -m SimpleHTTPServer 8000"
+    "lint": "tslint --project tsconfig.json -t verbose src/**/*.ts[x]",
+    "start": "python -m SimpleHTTPServer 8000",
+    "test": "jest"
   }
 }

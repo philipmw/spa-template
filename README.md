@@ -9,8 +9,9 @@ Good practices this repo provides:
 * TSLint
 * Webpack
 * React
+* unit-testing with Jest and Enzyme
 * 3rd party dependencies loaded externally using a CDN
-* Easy local development
+* easy local development
 
 ## Prerequisites
 
@@ -29,7 +30,11 @@ This creates a `node_modules` directory.
 
 This creates a `built` directory with compiled JS of your SPA.
 
-## View SPA
+## Unit-test SPA
+
+    $ npm test
+
+## View SPA locally
 
 Simply open `index.html` from your local filesystem.
 
@@ -38,6 +43,20 @@ Or to start a webserver locally,
     $ npm start
 
 and go to http://localhost:8000.
+
+# Publish to the Internet
+
+Upload `index.html` and `app.bundle.js` to a web host:
+
+    .
+    |- index.html
+    \- built/
+       \- app.bundle.js
+
+A non-traditional host that I really like, for its simplicity and speed, is
+[Amazon S3 Static Website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
+
+Here is the Internet-hosted version of this project: http://philipmw-spa-template.s3-website-us-west-2.amazonaws.com/
 
 ## Can you make it better?
 

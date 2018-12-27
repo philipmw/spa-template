@@ -5,6 +5,7 @@
     "outDir": "./built",
     "allowJs": true,
     "noImplicitReturns": true,
+    "esModuleInterop": true,
     "jsx": "react"
   },
   "include": [
