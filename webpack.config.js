@@ -9,9 +9,7 @@ module.exports = {
   },
   externals: {
     react: 'React',
-    redux: 'Redux',
-    'react-dom': 'ReactDOM',
-    'react-redux': 'ReactRedux'
+    'react-dom': 'ReactDOM'
   },
   module: {
     rules: [
