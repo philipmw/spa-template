@@ -24,34 +24,30 @@ means is most convenient for you, such as [Homebrew](https://brew.sh/) on macOS.
  
 This creates a `node_modules` directory.
 
-## Build SPA
-
-    $ npm run build
-
-This creates a `built` directory with compiled JS of your SPA.
-
 ## Unit-test SPA
 
     $ npm test
 
 ## View SPA locally
 
-Simply open `index.html` from your local filesystem.
-
-Or to start a webserver locally,
-
     $ npm start
 
-and go to http://localhost:8000.
+And your browser will magically open to the web app.
+This supports hot-reloading, so feel free to edit Javascript and see your changes
+in the browser immediately.
+
+The other way that works is to build the app explicitly (`npm run build`), then
+simply open _index.html_ from the local filesystem in the browser.
 
 # Publish to the Internet
 
-Upload `index.html` and `app.bundle.js` to a web host:
+Build:
 
-    .
-    |- index.html
-    \- built/
-       \- app.bundle.js
+    $ npm run build
+
+This will create `web/app.bundle.js`.
+
+Then upload the contents of `web/` to your web host.
 
 A non-traditional host that I really like, for its simplicity and speed, is
 [Amazon S3 Static Website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).

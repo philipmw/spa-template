@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/App.tsx',
   output: {
-    path: path.resolve(__dirname, 'built'),
+    path: path.resolve(__dirname, 'web'),
     filename: 'app.bundle.js'
   },
   externals: {
@@ -16,7 +16,13 @@ module.exports = {
       {test: /\.(ts|tsx)$/, use: 'ts-loader'}
     ]
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'web')
+  },
   resolve: {
-    extensions: ['.ts', '.tsx']
+    extensions: [
+      '.js', // needed for webpack-dev-server: https://github.com/webpack/webpack-dev-server/issues/720#issuecomment-268470989
+      '.ts',
+      '.tsx']
   }
 };
