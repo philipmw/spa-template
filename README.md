@@ -39,7 +39,7 @@ in the browser immediately.
 The other way that works is to build the app explicitly (`npm run build`), then
 simply open _index.html_ from the local filesystem in the browser.
 
-# Publish to the Internet
+## Publish to the Internet
 
 Build:
 
