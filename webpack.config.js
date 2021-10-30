@@ -17,7 +17,9 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'web')
+    static: {
+      directory: path.join(__dirname, 'web')
+    }
   },
   resolve: {
     extensions: [
