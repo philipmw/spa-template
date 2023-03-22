@@ -9,7 +9,7 @@ Good practices this repo provides:
 * TSLint
 * Webpack
 * React
-* unit-testing with Jest and Enzyme
+* unit-testing with Jest and React Testing Library
 * 3rd party dependencies loaded externally using a CDN
 * easy local development
 
