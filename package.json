@@ -4,23 +4,24 @@
   "homepage": "https://github.com/philipmw/spa-template",
   "license": "MIT",
   "dependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/philipmw/spa-template"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
     "@types/jest": "latest",
-    "@types/react": "~17",
+    "@types/react": "~18",
     "@types/react-dom": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "@wojtekmaj/enzyme-adapter-react-17": "latest",
-    "enzyme": "latest",
     "eslint": "latest",
     "jest": "latest",
+    "jest-environment-jsdom": "latest",
     "ts-jest": "latest",
     "ts-loader": "latest",
     "typescript": "latest",

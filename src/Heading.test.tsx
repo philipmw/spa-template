@@ -1,20 +1,17 @@
-import {configure, shallow} from "enzyme";
-import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+import "@testing-library/jest-dom";
+import {render, screen} from "@testing-library/react";
 import * as React from "react";
 import {Heading} from "./Heading";
 
-configure({adapter: new Adapter()});
-
 describe("Heading", () => {
   it("renders a <h2>", () => {
-    const wrapper = shallow(<Heading text="blah"/>);
-    expect(wrapper.type())
-      .toBe("h2");
+    render(<Heading text="blah"/>);
+    expect(screen.getByRole("heading")).toBeInTheDocument();
   });
 
   it("puts the `text` attribute inside <h2>", () => {
-    const wrapper = shallow(<Heading text="blah"/>);
-    expect(wrapper.text())
-      .toBe("blah");
+    render(<Heading text="blah"/>);
+    const element = screen.getByRole("heading");
+    expect(element).toHaveTextContent("blah");
   });
 });
