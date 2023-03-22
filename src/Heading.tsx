@@ -1,11 +1,9 @@
 import * as React from "react";
 
-interface IProps {
+interface In {
   text: string;
 }
 
-export class Heading extends React.Component<IProps> {
-  public render(): JSX.Element {
-    return <h2>{this.props.text }</h2>;
-  }
+export function Heading({ text }: In): JSX.Element {
+  return <h2>{ text }</h2>;
 }
