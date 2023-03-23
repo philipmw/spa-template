@@ -20,6 +20,7 @@
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
     "jest": "latest",
     "jest-environment-jsdom": "latest",
     "ts-jest": "latest",
@@ -31,8 +32,8 @@
   },
   "scripts": {
     "build": "webpack && npm run lint",
-    "lint": "eslint -c eslintrc-src.yml src",
+    "lint": "eslint src",
     "start": "webpack-dev-server --open",
-    "test": "eslint -c eslintrc-test.yml src/*.test.ts[x] && jest"
+    "test": "eslint src/*.test.ts[x] && jest"
   }
 }

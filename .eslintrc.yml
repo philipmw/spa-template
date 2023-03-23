@@ -2,6 +2,7 @@
 extends:
   - "eslint:recommended"
   - "plugin:@typescript-eslint/all"
+  - "plugin:react-hooks/recommended"
 parser: "@typescript-eslint/parser"
 parserOptions:
   project: "./tsconfig.json"
@@ -14,5 +15,10 @@ rules:
   "@typescript-eslint/space-before-function-paren":
     - error
     - never
+  # Allow functions to be Pascal case since we use React functional components
+  "@typescript-eslint/naming-convention":
+    - error
+    - selector: "function"
+      format: ["StrictPascalCase"]
 ignorePatterns:
   - "**/*.test.tsx"
